@@ -1,10 +1,3 @@
-puts "", "", "", "This Caesar Cypher tool will convert your text to an encoded message."
-puts "When encoding, choose a key between 1 and 25."
-puts "The decode key will be it's negative." , "", "What would you like to encode/decode?"
-message = gets.chomp.to_s.split('')
-puts "What is the key?"
-key = gets.chomp.to_i
-
 def caesar_cipher(word, shift)
     lowercase = ('a'..'z').to_a
     uppercase = ('A'..'Z').to_a
@@ -26,6 +19,13 @@ def caesar_cipher(word, shift)
         end
     end
 end
+
+puts "", "", "", "This Caesar Cypher tool will convert your text to an encoded message."
+puts "When encoding, choose a key between 1 and 25."
+puts "The decode key will be it's negative." , "", "What would you like to encode/decode?"
+message = gets.chomp.to_s.split('')
+puts "What is the key?"
+key = gets.chomp.to_i
 
 message_converted = caesar_cipher(message, key).join
 puts "", "", "Your encoded message is:"
