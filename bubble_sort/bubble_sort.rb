@@ -1,6 +1,6 @@
 def bubble_sort(array_to_sort)
     n = array_to_sort.length
-    n.times do
+    ( n - 1 ).times do
         array_to_sort.each_with_index do | first, idx |
             sec = (array_to_sort[idx + 1])
             unless sec == nil
